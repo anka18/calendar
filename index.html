@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="monthApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script type="text/javascript" src="js/month-app.js"></script>
+</head>
+<body>
+    <div class="main" ng-controller="MonthController">
+        <div class="container container-custom">
+            <div class="row">
+                <div class="title-main">
+                    Бронирование даты
+                </div>
+                <!--month-->
+                <div class="col-sm-6 col-md-4 col-lg-2 month-wrapper" ng-repeat="month in months">
+                    <div class="month">
+                        <div class="title-wrapper">
+                            {{month.name}}
+                        </div>
+                        <div class="week">
+                            <div class="day-week">Пн</div>
+                            <div class="day-week">Вт</div>
+                            <div class="day-week">Ср</div>
+                            <div class="day-week">Чт</div>
+                            <div class="day-week">Пт</div>
+                            <div class="day-week day-off">Сб</div>
+                            <div class="day-week day-off">Вс</div>
+                        </div>
+                        <div class="days">
+                            <div class="week" ng-repeat="week in month.weeks">
+                                
+                                <div class="date {{ day.is_reserved == true ? 'reserved' : '' }}  {{ day.is_user_reserved == true ? 'local-reserved' : '' }} {{ day.is_empty == true ? 'date-none' : '' }}" ng-repeat="day in week" ng-click="clickDay(day)">
+                                    {{ day.number }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--month/-->
+            </div>
+            <div class="form-wrapper">
+                <span class="form-title">Укажите телефон:</span>
+                <form action="">
+                    <input type="tel" class="tel" ng-model="phoneNumber"  placeholder="+7(___)_________">
+                    <button class="submit" type="button" "{{ phoneNumberIsValid == true && userReservedDay != null ? '' : 'disabled' }}" ng-click="updateData()">Забронировать</button>
+                </form>
+                <div class="send-box error {{ statusGetData.status  == 'error'   ? 'display-msg' : 'hide-msg'  }} ">При загрузке данных произошла ошибка!</div>
+                <div class="send-box success {{ statusSendData.status == 'success' ? 'display-msg' : 'hide-msg'  }} ">Данные успешно отправлены!</div>
+                <div class="send-box error   {{ statusSendData.status == 'error'   ? 'display-msg' : 'hide-msg'  }} ">Ошибка при отправке!</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

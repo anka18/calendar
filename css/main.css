@@ -1,0 +1,161 @@
+body {
+  background-color: #fff; }
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+  margin-top: 100px; }
+
+.title-main {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 48px;
+  color: #227947;
+  font-weight: 400;
+  margin-bottom: 30px; }
+
+.month-wrapper {
+  padding: 0px 8px 16px; }
+
+.month {
+  background-color: #ebf5ec;
+  border: 1px solid rgba(37, 134, 60, 0.5);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 7px 15px 10px; }
+
+.title-wrapper {
+  text-align: center;
+  color: #0d592d;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  border-bottom: 1px solid #8d978e;
+  width: 125px;
+  margin: 0px auto 15px;
+  padding-bottom: 3px; }
+
+.week {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: lowercase;
+  margin-bottom: 3px; }
+
+.day-week {
+  background-color: #fff;
+  color: #0d592d;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 5px; }
+
+.day-off {
+  color: #fff;
+  background-color: #e2907a; }
+
+.date {
+  background-color: #fff;
+  color: #0d592d;
+  width: 13%;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  min-height: 20px; }
+  .date:hover {
+    color: #fff;
+    background-color: #e2907a; }
+
+.local-reserved {
+  color: #fff;
+  background-color: #e2907a; }
+
+.reserved {
+  background-color: #77b97e;
+  color: #fff; }
+
+.form-wrapper {
+  margin-top: 14px;
+  margin-left: -7px; }
+
+.form-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px; }
+
+.tel {
+  border: 1px solid rgba(34, 34, 34, 0.5);
+  -webkit-box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+  padding: 12px 15px;
+  font-size: 16px;
+  margin-top: 10px; }
+
+.submit {
+  background-color: #68a977;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 20px;
+  padding: 12px 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .submit:hover {
+    background-color: #85af8f; }
+
+.send-box {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 15px; }
+  .send-box.success {
+    color: #0d592d; }
+  .send-box.error {
+    color: #e2907a; }
+  .display-msg {
+    display: block;
+  }
+  .hide-msg {
+    display: none;
+  }
+
+.date-none {
+  opacity: 0; }
+
+@media (min-width: 1200px) {
+  .container-custom {
+    max-width: 1200px; } }
+
+@media (max-width: 640px) {
+  .main {
+    margin-top: 50px;
+    margin-bottom: 50px; } 
+  .title-main {
+    font-size: 30px;
+    margin-left: 8px;
+  }
+  .tel {
+    width: 100%;
+  }
+  .submit {
+    margin-top: 15px;
+    width: 100%;
+    margin-left: 0px;
+  } }
+
