@@ -1410,6 +1410,11 @@
 					"is_reserved": false
 				},
 				{
+					"number": "",
+					"is_empty": true,
+					"is_reserved": false
+				},
+				{
 					"number": 1,
 					"is_reserved": false
 				},
