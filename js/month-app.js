@@ -70,7 +70,6 @@ function MonthController ($scope, $http) {
             $http.post('/send_data.php', $scope.months)
                 .then(function (response) {
                     if (response.status == 200) {
-                        $scope.months = response.data;
                         $scope.statusSendData.status = 'success';
                     } else {
                         $scope.statusSendData.status = 'error';
